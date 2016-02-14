@@ -11,15 +11,19 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
 
     //設定整個app通用的外觀
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-//        UINavigationBar.appearance().barTintColor = UIColor(red: 134/255, green: 226/255, blue: 213/255, alpha: 1.0)
-//        UINavigationBar.appearance().barTintColor = UIColor(red: 25/255, green: 181/255, blue: 254/255, alpha: 1.0)
+        //Parse Database
+        Parse.setApplicationId("T47ybd32DoVD43D85yO3AUwf5tzOIpcrKKkqVdtA", clientKey:"c0Evf0dzyiMVyI49FqLQu32Y5UnfLAzotk1k9o64")
+        
+        // Parse 追蹤統計 App 的開啟次數
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        
         UINavigationBar.appearance().barTintColor = UIColor(red: 249/255, green: 191/255, blue: 59/255, alpha: 1.0)
         
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()

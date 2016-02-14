@@ -23,6 +23,15 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //parse 寫入測試
+        //let testObject = PFObject(className: "Restaurant")
+        //testObject["name"] = "test"
+        //testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+        //print("Object has been saved.")
+        //}
+        //======================================================
+        
+        
         //將返回按鈕的標題清空
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         

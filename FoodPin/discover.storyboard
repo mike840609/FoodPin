@@ -2,28 +2,84 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dhK-1G-Mpi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Discover-->
         <scene sceneID="xKn-Io-9wa">
             <objects>
-                <tableViewController id="xD9-UK-VdC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="F4s-nn-rbl">
+                <tableViewController id="xD9-UK-VdC" customClass="DiscoverTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="22" sectionFooterHeight="22" id="F4s-nn-rbl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SE1-Ib-GDL">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="92" id="SE1-Ib-GDL" customClass="KivaLoanTableViewCell" customModule="FoodPin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SE1-Ib-GDL" id="Rb6-bS-TqQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRy-eX-9jp">
+                                            <rect key="frame" x="514" y="6" width="74" height="34"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ke-wf-Ugj">
+                                            <rect key="frame" x="11" y="29" width="138" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="138" id="62f-qv-tx4"/>
+                                                <constraint firstAttribute="height" constant="21" id="7xq-13-eUb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNY-me-Id1">
+                                            <rect key="frame" x="11" y="48" width="229" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="229" id="LBR-fg-fUa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50d-I4-fYK">
+                                            <rect key="frame" x="11" y="6" width="212" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="212" id="fNW-Ey-pec"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8Ke-wf-Ugj" firstAttribute="leading" secondItem="iNY-me-Id1" secondAttribute="leading" id="6wX-j8-fEl"/>
+                                        <constraint firstItem="8Ke-wf-Ugj" firstAttribute="top" secondItem="50d-I4-fYK" secondAttribute="bottom" constant="2" id="Bc6-7t-q9s"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GRy-eX-9jp" secondAttribute="trailing" constant="4" id="Fe9-TV-JaF"/>
+                                        <constraint firstItem="50d-I4-fYK" firstAttribute="top" secondItem="Rb6-bS-TqQ" secondAttribute="topMargin" constant="-2" id="Fhc-Z3-BQp"/>
+                                        <constraint firstItem="iNY-me-Id1" firstAttribute="top" secondItem="50d-I4-fYK" secondAttribute="bottom" constant="21" id="L73-BH-Cdj"/>
+                                        <constraint firstItem="50d-I4-fYK" firstAttribute="leading" secondItem="Rb6-bS-TqQ" secondAttribute="leadingMargin" constant="3" id="bh4-nE-8K1"/>
+                                        <constraint firstItem="50d-I4-fYK" firstAttribute="leading" secondItem="8Ke-wf-Ugj" secondAttribute="leading" id="gMH-RH-2Ns"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iNY-me-Id1" secondAttribute="bottom" constant="-2.5" id="hQF-r7-oDd"/>
+                                        <constraint firstItem="50d-I4-fYK" firstAttribute="top" secondItem="GRy-eX-9jp" secondAttribute="top" id="sr2-pp-uBa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="GRy-eX-9jp" secondAttribute="bottom" constant="43.5" id="wjw-ku-WWv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8Ke-wf-Ugj" secondAttribute="bottom" constant="33.5" id="zsJ-d1-T2V"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="GRy-eX-9jp" id="wPj-Ub-FZj"/>
+                                    <outlet property="countryLabel" destination="8Ke-wf-Ugj" id="50V-Hi-3Gi"/>
+                                    <outlet property="nameLabel" destination="50d-I4-fYK" id="Zyf-mW-6lQ"/>
+                                    <outlet property="useLabel" destination="iNY-me-Id1" id="8BC-FL-znR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="xD9-UK-VdC" id="vxG-0W-fWf"/>
+                            <outlet property="dataSource" destination="xD9-UK-VdC" id="ece-fh-L3X"/>
                             <outlet property="delegate" destination="xD9-UK-VdC" id="2p1-HX-Jas"/>
                         </connections>
                     </tableView>
