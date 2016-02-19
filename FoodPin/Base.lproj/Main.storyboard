@@ -100,7 +100,7 @@
         <!--Login-->
         <scene sceneID="wm7-YM-Wsc">
             <objects>
-                <viewController id="hx8-V9-ELk" customClass="LoginViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hx8-V9-ELk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ryb-Kp-Q4T"/>
                         <viewControllerLayoutGuide type="bottom" id="918-AK-ztG"/>
@@ -111,10 +111,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="o1Z-76-w40">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="iGv-t0-b7p"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="iGv-t0-b7p">
+                            <connections>
+                                <segue destination="GSA-qZ-yTq" kind="unwind" unwindAction="unwindToHomeScreen:" id="4B1-nG-d5T"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoA-xk-6BG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GSA-qZ-yTq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4573" y="-1294"/>
         </scene>

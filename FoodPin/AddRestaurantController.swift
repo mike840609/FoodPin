@@ -24,8 +24,7 @@ class AddRestaurantController: UITableViewController ,UIImagePickerControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //不讓表格被選取
-        self.tableView.allowsSelection = false
+        
     }
     
     //didSelectRowAtIndexPath 其中一個cell被選取時呼叫   判斷後載入照片庫
@@ -42,6 +41,8 @@ class AddRestaurantController: UITableViewController ,UIImagePickerControllerDel
                 self.presentViewController(imagePicker,animated: true,completion: nil)
             }
         }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     // 從相簿挑選照片後 didFinishPickingMediaWithInfo 會被呼叫 指定選取照片給圖像視圖
@@ -73,7 +74,7 @@ class AddRestaurantController: UITableViewController ,UIImagePickerControllerDel
         let type = typeTextField.text
         let location = locationTextField.text
         let phoneNumber = phoneNumberTextField.text
-
+        
         
         // Validate input fields
         if name == "" || type == "" || location == "" {
